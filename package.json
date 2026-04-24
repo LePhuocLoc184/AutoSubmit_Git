@@ -1,0 +1,27 @@
+{
+  "name": "git-submit-tool",
+  "version": "2.0.0",
+  "description": "Tool nộp bài tự động với giao diện đẹp",
+  "main": "submit.js",
+  "bin": {
+    "submit": "./submit.js"
+  },
+  "scripts": {
+    "submit": "node submit.js"
+  },
+  "keywords": [
+    "git",
+    "submit",
+    "tool"
+  ],
+  "author": "Lê Phước Lộc",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "figlet": "^1.11.0",
+    "inquirer": "^8.2.7",
+    "open": "^8.4.2",
+    "ora": "^5.4.1"
+  },
+  "type": "commonjs"
+}
