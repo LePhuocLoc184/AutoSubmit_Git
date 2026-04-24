@@ -1,59 +1,74 @@
-# 🚀 Git Submit Tool - Trợ Lý Nộp Bài Tự Động (Pro Version)
+TỚ NGỒI VIBE CODING ĐỂ TẠO RA TOOL NÀY CHO ANH EM TIỆN NỘP BÀI THUI NHÉ
 
-**Git Submit Tool** là công cụ dòng lệnh (CLI) được thiết kế đặc biệt giúp tự động hóa quy trình nộp bài tập code (C/C++, Web Front-end) lên GitHub. 
+# 🚀 Git Submit Tool - Trợ Lý Ảo Quản Lý & Nộp Bài Tự Động
 
-Phiên bản này đã được đóng gói thành file thực thi độc lập (`.exe`) và thiết lập như một lệnh hệ thống. Chỉ với một từ khóa `submit`, công cụ sẽ lo toàn bộ quy trình: khởi tạo Git, xử lý conflict, đẩy code và mở web kiểm tra thành quả.
+**Git Submit Tool** là một công cụ dòng lệnh (CLI) được viết bằng Node.js, thiết kế đặc biệt dành cho anh em lập trình viên (đặc biệt là sinh viên IT học C/C++ và Front-end). 
+
+Thay vì phải gõ đi gõ lại hàng tá câu lệnh Git nhàm chán hay click chuột tạo từng thư mục, Trợ lý ảo này sẽ giúp bạn tự động hóa 100% quy trình chỉ với một câu lệnh `submit` duy nhất!
 
 ---
 
 ## ✨ Tính Năng Nổi Bật
 
-- **Chạy Trực Tiếp (Standalone):** Không cần cài đặt Node.js hay các thư viện trung gian.
-- **Khởi Tạo Tự Động:** Tự động `git init` nếu thư mục chưa có Git.
-- **Tích Hợp GitHub CLI:** Tạo repository mới trực tiếp từ Terminal.
-- **Ghi Nhớ Cấu Hình:** Tự động lưu tên Organization (`IT202RIKKEI`...) cho các lần nộp bài sau.
-- **Tự Động "Chữa Cháy":** Cảnh báo và hỗ trợ tự động gộp code (`pull --rebase`) nếu có conflict.
-- **One-click Open:** Tự bật trình duyệt web trỏ thẳng vào repo sau khi push thành công.
+- 🌍 **Lệnh Toàn Cầu (Global Command):** Biến tool thành lệnh hệ thống. Mở Terminal ở bất kỳ đâu, gõ `submit` là chạy!
+- 📁 **Tạo Bài Tập Hàng Loạt (Scaffold):** Tự động đẻ ra hàng loạt thư mục bài tập (VD: Bài 4, Bài 5, Bài 6...).
+- 📝 **Tạo Sẵn Template Code:** Hỗ trợ nhét sẵn file `index.html, style.css, app.js` (Web) hoặc `main.cpp` (C++) vào thư mục vừa tạo để bạn code luôn.
+- 🚀 **Push Hàng Loạt:** Tự động tạo repo trên GitHub và đẩy code của từng bài lên một cách trơn tru.
+- 🧠 **Chữa Cháy Conflict:** Phát hiện code trên GitHub bị lệch, tự động đề xuất gộp code (`pull --rebase`) và hiển thị chính xác file nào vừa thay đổi.
+- 🌐 **Mở Web Tự Động:** Đẩy code xong là tự động bật trình duyệt bay thẳng vào trang GitHub để ngắm thành quả.
 
 ---
 
-## ⚙️ Yêu Cầu Hệ Thống
+## ⚙️ Yêu Cầu Hệ Thống (Bắt buộc)
 
-Máy tính của bạn chỉ cần cài đặt 2 công cụ lõi sau (Không cần Node.js):
+Trước khi cài đặt, hãy chắc chắn máy bạn đã có đủ 3 "bảo bối" sau:
 
-1. **[Git](https://git-scm.com/):** Để quản lý phiên bản code.
-2. **[GitHub CLI (`gh`)](https://cli.github.com/):** Để giao tiếp với GitHub.
-   > **⚠️ Quan trọng:** Sau khi cài GitHub CLI, hãy mở Terminal và chạy lệnh `gh auth login` để đăng nhập tài khoản GitHub của bạn trước khi dùng tool.
-
----
-
-## 🛠️ Hướng Dẫn Cài Đặt Lệnh Global
-
-Để biến tool này thành một câu lệnh có thể gọi ở bất kỳ thư mục nào trên máy tính, bạn chỉ cần thiết lập 1 lần duy nhất theo các bước sau:
-
-**1. Tạo thư mục lưu trữ:** Tạo một thư mục ở ổ C (Ví dụ: `C:\PTIT_Tools`) và copy file `submit.exe` tải về vào thư mục đó.
-
-**2. Mở cài đặt hệ thống:** Nhấn phím `Windows` trên bàn phím, gõ chữ **"path"** và chọn mục **"Edit the system environment variables"**.
-
-**3. Thêm vào Path:**
-- Trong cửa sổ hiện ra, chọn nút **Environment Variables...** ở góc dưới cùng.
-- Nhìn xuống ô **System variables** (nửa dưới), cuộn tìm dòng chữ **Path**, click đúp vào nó (hoặc chọn rồi nhấn Edit).
-- Nhấn nút **New** và dán chính xác đường dẫn thư mục vừa tạo (Ví dụ: `C:\PTIT_Tools`) vào ô trống.
-- Nhấn **OK** liên tục ở các cửa sổ để lưu lại và thoát ra hết.
-
-*Khởi động lại Terminal (CMD/PowerShell) hoặc VS Code để Windows nhận lệnh mới.*
+1. **[Node.js](https://nodejs.org/):** Môi trường chạy Tool.
+2. **[Git](https://git-scm.com/):** Để quản lý phiên bản code.
+3. **[GitHub CLI (`gh`)](https://cli.github.com/):** Công cụ giao tiếp với GitHub.
+   > **⚠️ LƯU Ý SỐNG CÒN:** Sau khi cài GitHub CLI, bạn **phải** mở Terminal và chạy lệnh `gh auth login` để đăng nhập vào tài khoản GitHub của bạn trước thì tool mới có thể tự động tạo repo được nhé!
 
 ---
 
-## 🚀 Cách Sử Dụng
+## 🛠️ Hướng Dẫn Cài Đặt (Chỉ 1 lần duy nhất)
 
-Sau khi setup xong, mỗi khi code xong bài và muốn nộp, bạn chỉ cần:
+**Bước 1:** Tải toàn bộ Source Code của tool này về máy (Bấm nút xanh `Code` -> `Download ZIP`) và giải nén ra một thư mục cố định (VD: `C:\PTIT_Tools\GitSubmit`).
 
-1. Mở Terminal (hoặc CMD/PowerShell) ngay tại thư mục chứa bài tập.
-2. Gõ lệnh thần thánh:
-   ```bash
-   submit
+**Bước 2:** Mở Terminal (CMD/PowerShell) tại chính thư mục vừa giải nén đó.
 
+**Bước 3:** Chạy lệnh sau để tải toàn bộ các thư viện cần thiết (không cần cài lẻ tẻ):
+```bash
+npm install
+Bước 4: Chạy lệnh "Thần thánh" để biến tool thành lệnh hệ thống:
 
-## CÂU LỆNH FIX LỖI
-npm install open@8 inquirer@8 chalk@4 ora@5 figlet
+Bash
+npm link
+(Xong! Giờ bạn có thể đóng Terminal này lại).
+
+🎮 Cách Sử Dụng
+Sau khi setup xong, quy trình làm việc của bạn sẽ nhàn rỗi như sau:
+
+1. Khởi tạo bài mới:
+
+Mở Terminal ở thư mục môn học.
+
+Gõ lệnh submit -> Chọn tính năng Tạo thư mục bài tập tự động.
+
+Nhập số lượng bài, chọn loại code (Web/C++) và xem tool biểu diễn.
+
+2. Nộp bài (Push Code):
+
+Khi code xong 1 bài, mở Terminal tại thư mục bài đó.
+
+Gõ lệnh submit -> Chọn Nộp bài lên GitHub.
+
+Gõ lời nhắn (Commit message) và Enter. Tool sẽ tự động đẩy code lên mạng!
+
+🤝 Tác Giả
+Công cụ được phát triển bằng đam mê để tối ưu hóa thời gian học tập cho anh em coder.
+
+Tác giả: Lê Phước Lộc
+
+Phiên bản: 1.0.0
+
+Chúc anh em code mượt mà, không bug và điểm tuyệt đối! 🎯
