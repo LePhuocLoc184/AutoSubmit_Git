@@ -212,9 +212,7 @@ function escapeMessage(msg) {
                         );
                     } else if (template === "sql") {
                         fs.writeFileSync(
-                            path.join(folderPath, "TUDOITENFILENHATHANGLON.sql"),
-                            `#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << "Hello from ${folderName}!" << endl;\n    return 0;\n}`
-                        );
+                            path.join(folderPath, "TUDOITENFILENHATHANGLON.sql"));
                     } else if (template === "suprise") {
                         const noiDung = `ANH YÊU MẤY EM`;
                         fs.writeFileSync(path.join(folderPath, "TUDOITENFILENHATHANGLON.txt"), noiDung);
