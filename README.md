@@ -12,9 +12,9 @@ Thay vì phải gõ đi gõ lại hàng tá câu lệnh Git nhàm chán hay clic
 
 - 🌍 **Lệnh Toàn Cầu (Global Command):** Biến tool thành lệnh hệ thống. Mở Terminal ở bất kỳ đâu, gõ `submit` là chạy!
 - 📁 **Tạo Bài Tập Hàng Loạt (Scaffold):** Tự động đẻ ra hàng loạt thư mục bài tập (VD: Bài 4, Bài 5, Bài 6...).
-- 📝 **Tạo Sẵn Template Code:** Hỗ trợ nhét sẵn file `index.html, style.css, app.js` (Web) hoặc `main.cpp` (C++) vào thư mục vừa tạo để bạn code luôn.
+- 📝 **Tạo Sẵn Template Code:** Hỗ trợ nhét sẵn file `index.html, style.css, script.js` (Web) hoặc `bai1.sql` (sql) vào thư mục vừa tạo để bạn code luôn.
 - 🚀 **Push Hàng Loạt:** Tự động tạo repo trên GitHub và đẩy code của từng bài lên một cách trơn tru.
-- 🧠 **Chữa Cháy Conflict:** Phát hiện code trên GitHub bị lệch, tự động đề xuất gộp code (`pull --rebase`) và hiển thị chính xác file nào vừa thay đổi.
+- 🧠 **Chữa Cháy Conflict:** Phát hiện code trên GitHub bị lệch, tự động đề xuất gộp code (`pull --rebase`) và hiển thị chính xác file nào vừa thay đổi. (LỖI ĐÉO SÀI ĐƯỢC ĐÂU)
 - 🌐 **Mở Web Tự Động:** Đẩy code xong là tự động bật trình duyệt bay thẳng vào trang GitHub để ngắm thành quả.
 
 ---
